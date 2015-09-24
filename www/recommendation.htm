@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="Zoho Sites 1.0, http://zoho.com/sites"><title>Health Monitoring Analytics - Recommendation</title><meta property="og:title" content="Health Monitoring Analytics - Recommendation"><meta property="og:url" content="Recommendation.htm"><meta property="og:description" content=""><link href="Recommendation_files/content_style.css" rel="stylesheet" type="text/css"><link href="Recommendation_files/style.css" rel="stylesheet" type="text/css"><link href="Recommendation_files/contentreset_style.css" type="text/css" rel="stylesheet"> <link rel="stylesheet" href="Recommendation_files/webfonts.css" type="text/css"><script>var ZS_ColumnFix=false;var ZS_FormAppName="health-monitoring-analytics-42884795"</script><!--[if gt IE 8]><script>ZS_ColumnFix=true</script><script src="/js/json2.js"></script><![endif]--><script src="Recommendation_files/commonUtils.js"></script><script src="Recommendation_files/bootstrap.js"></script><script src="Recommendation_files/navigation.js"></script><script>var ZS_adjustHeight=false;var ZS_PublishMode = true; var ZS_MobileVer = false;</script><script src="Recommendation_files/animation.js"></script><script src="Recommendation_files/audio.js"></script><script src="Recommendation_files/in.js"></script><script src="Recommendation_files/jquery.js"></script><script src="Recommendation_files/secureAnonymousFramework"></script><script src="Recommendation_files/form.js"></script><script src="Recommendation_files/generatejs.js"></script><script src="Recommendation_files/searchableInput.js"></script><script src="Recommendation_files/app.js"></script><script src="Recommendation_files/form-renderer.js"></script><script src="Recommendation_files/formSubmitJs.js"></script>
+
+
+<script type='text/javascript'>function WeatherTableCreation(str)
+{
+	
+	lead = new Array();
+	$.ajax({
+                       type: "GET",
+                       url: "Recommendation_files/temp.php",
+                       data: {State : str},
+                       success: function(result){
+			lead = JSON.parse(result);
+			$("#Templace").html(lead[0]);
+			$("#Temtem").html(lead[1]);
+			$("#Temstatus").html(lead[2]);
+   			$("#Temwind").html(lead[3]);
+			$("#Temhumidity").html(lead[4]);
+   			$("#Tempressure").html(lead[5]);
+	               }
+                     });
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","getcustomer.asp?q="+str,true);
+xmlhttp.send();
+}</script>
+
+
+
+
+
+</head><body>
+<div class="themeWidth">
+  <div class="themeSocialIconAndSearchBoxContainer"> 
+     </div>
+  <div class="themeContentContainer">
+    <div class="themeBrandingArea">
+      <div class="themeBrandingContainer">
+        <div class="tableRow"> 
+          <div class="tableCell themeLogoOuterContainer">
+            <div class="themeLogoArea"><a href="Home.htm"><img id="zpLogo" src="Recommendation_files/a.png" width="100px"></a></div>
+          </div>
+          
+          <div class="tableCell themeSitenameCaptionOuterContainer">
+            <div class="themeBrandingContainer themeSitenameCaptionInnerContainer">
+              <div class="tableRow themeSitenameCaptionContainer">
+                <div class="tableCell themeSitenameCaptionContainer">  <span class="themeSitename" id="zpSitename">Health Monitoring Analytics</span> 
+                   <span class="themeCaption" id="zpCaption">DJGIK</span>  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="themeNavigationContainer">
+      <div id="childPageParent" style="position:relative">
+    <div id="childPage">
+    </div>
+</div><div id="navigation">
+<ul data-transition="true" id="nav-top" data-navorientation="horizontal">
+            
+            
+            
+            
+            
+<li><a target="_self" href="index.htm"><span>Home</span><em></em></a></li><li><a target="_self" href="maps.htm"><span>Maps</span><em></em></a></li><li><a target="_self" href="play.htm"><span>Play</span><em></em></a></li><li class="selected"><a target="_self" href="recommendation.htm"><span>Recommendation</span><em></em></a></li><li><a target="_self" href="about.htm"><span>About</span><em></em></a></li></ul>
+
+
+</div>
+    </div>
+    
+        
+    
+    <div class="themeContentArea floatLeft" style="width:100%">    <div id="page-container" class="zpcontent-wrapper">
+
+            <div id="elm_Rx8n8zjkQOKOdwMjSWmwFA" class="zpelement-wrapper zpcol-layout">
+            <div class="zpcolumns">
+                    <div class="zpflLeft zpcolumn" style="width:60%">
+                    <div id="pos_o5mNiyKfRqudwW3Cp_TpDA" class="zpwrapper col-space"><div style="height:1px;">&nbsp;</div>
+
+        <div id="elm_zvcAHyt4Sz68YQHtekjOdA" class="zpelement-wrapper text">
+                <div>
+                  <h2><font size="6">Recommendation: </font></h2>
+                  <h2><font size="6">World's Most Popular Activities</font></h2>
+                </div>
+            </div>
+
+            <div id="elm_wiqUSx1wSzWxv84NXfSdcA" class="zpelement-wrapper image" name="image">
+                <div class="zpAlignPos" style="float:left;text-align:center;;margin-bottom:2px;">
+                  <div style="overflow: auto;">
+                    <table width="121%" style="float: left;width: 100.0%;">
+                      <tbody>
+                        <tr>
+                          <th width="20%">No.</th>
+                          <th width="47%">Activities</th>
+                          <th width="33%">Mentions</th>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">1</td>
+                          <td style="text-align: center;" id="firstactivity"></td>
+                          <td style="text-align: center;" id="firstnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">2</td>
+                          <td style="text-align: center;" id="secactivity"></td>
+                          <td style="text-align: center;" id="secsnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">3</td>
+                          <td style="text-align: center;" id="thirdactivity"></td>
+                          <td style="text-align: center;" id="thirdnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">4</td>
+                          <td style="text-align: center;" id="fourthactivity"></td>
+                          <td style="text-align: center;" id="fourthnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">5</td>
+                          <td style="text-align: center;" id="fifthactivity"></td>
+                          <td style="text-align: center;" id="fifthnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">6</td>
+                          <td style="text-align: center;" id="sixthactivity"></td>
+                          <td style="text-align: center;" id="sixthnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">7</td>
+                          <td style="text-align: center;" id="seventhactivity"></td>
+                          <td style="text-align: center;" id="seventhnumber"></td>
+                          </tr>
+                        <tr>
+                          <td style="text-align: center;">8</td>
+                          <td style="text-align: center;" id="eigthactivity"></td>
+                          <td style="text-align: center;" id="eigthnumber"></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="zpImageCaption" style="text-align:center; width: 462px;margin:0px auto;"></div></div>
+            </div>
+                    </div></div>
+              <form id="myform"  action=""  method="get" >
+                     
+                <h2 class="frmname">Weather Now</h2>
+                <ul>
+		
+                  <li id="Home-Location-1">
+                    <label>Location<br>
+                    (input the exact place and use : instead of space)</label>
+                    e.g.
+                  &quot;New:York,:US&quot;</li>
+                  <li>			 
+                    <div><span>
+                      <input type="text" onkeyup="WeatherTableCreation(this.value)">
+                    </span></div>
+                  </li>
+                  <li><span style="display:none;" id="formMsg_Home"></span></li>
+                  <li>
+                    <label>&nbsp;</label>
+                    <div>
+
+			</form>
+		
+
+                    </div>
+                  </li>
+                        <li>
+                          <table width="121%" style="float: left;width: 100.0%;">
+                            <tbody>
+                              <tr>
+                                <th width="20%">----</th>
+                                <th width="47%"> Weather Data</th>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center;">Place</td>
+                                <td style="text-align: center;" id="Templace"></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center;">Temperature (F)</td>
+                                <td style="text-align: center;" id="Temtem"></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center;">Status</td>
+                                <td style="text-align: center;" id="Temstatus"></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center;">Wind Speed (m/s)</td>
+                                <td style="text-align: center;" id="Temwind"></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center;">Humidity (%)</td>
+                                <td style="text-align: center;" id="Temhumidity"></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center;">Pressure (hpa)</td>
+                                <td style="text-align: center;" id="Tempressure"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </li>
+                </ul>
+                
+            </div></div>
+            <p>Check the weather and choose one of the world's most popular activities!</p>
+	
+    </div>
+</div>
+    
+    
+    
+    <div class="themeFooterArea clearDiv"> <div id="footer-container" class="zpcontent-wrapper"></div><!--zp:branding--> <!--/zp:branding--></div>
+     </div>
+</div>
+
+<div id="carouselCont" style="display:none"><div class="zs-slideshow-right-arrow"></div><div class="zs-slideshow-left-arrow"></div><div class="themeSlideshowOuterContainer"> <span class="themeSlideshowInnerContainer"> <span class="zs-slideshow-control"></span> </span> </div></div><div id="carouselCont" style="display:none"><div class="zs-slideshow-right-arrow"></div><div class="zs-slideshow-left-arrow"></div><div class="themeSlideshowOuterContainer"><span class="themeSlideshowInnerContainer"><span class="zs-slideshow-control"></span></span></div></div><div id="footerBar" style="display:none;font: 13px Arial,Helvetica,sans-serif; overflow: hidden; background:rgba(255, 255, 255, 0.3); padding: 3px 5px;"><span style="float: left; display: none; margin-top: 3px; padding: 0px 10px 0px 0px;" id="mobileSite"><a onclick="setCookie('userView','mobile','','/');" style="text-decoration: none;line-height: 1.5;color:#259A56;" href="http://healthmonitoringanalytics.zohosites.com/mobile/">Mobile Site</a></span></div><div style="clear:both"></div>
+</body></html>

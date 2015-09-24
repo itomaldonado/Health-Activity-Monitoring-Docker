@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style type="text/css">
+  html { width: 100%; height: 100% }
+  body { width: 100%; height: 100% }
+  #map_canvas { position: relative; width: 500px; height: 500px }
+ <!
+#panel {
+       
+		position: absolute;
+        
+        left: 40%;
+        
+        z-index: 3;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+		
+      }
+>
+}
+</style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+<script type = "text/javascript" src = "PerCapitaHeatMapJSAjax.js"></script>
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map_canvas {
+        height: 90%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+
+
+
+    <script>
+	var map;
+	var heatmap;
+	HeatMapData=[];
+	WeightedMapData = [];
+	RegularMapData = []; 
+	
+/*	
+function initialize() {
+  var mapOptions = {
+    zoom: 4,
+    center: new google.maps.LatLng(39.833333, -98.583333)
+  };
+
+  var mapCanvas = document.getElementById('map_canvas');
+
+			map = new google.maps.Map(mapCanvas, mapOptions)
+		  
+		heatmap = new google.maps.visualization.HeatmapLayer({
+		data: HeatMapData,
+			radius:15
+		}
+			heatmap.setMap(map);
+}
+*/
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
+document.ready = loadScript;
+
+
+    </script>
+
+<script>{ window.onload = loadScript; }</script>
+
+  </head>
+  <body >
+	<div id="panel">  <h1>  PerCapita HeatMap </h1> </div>
+    <div  id="map_canvas"> themap </div>
+	
+	<p>
+		<h2>Choose Map Type </h2>
+		<label><input type = "radio" name = "MapType"  id="heatmap" value="heatmap" checked="checked" onclick="ChooseRegular()"> Regular Heatmap </label><br />
+		<label><input type = "radio" name = "MapType"  id="percapitaheatmap" value="percapitaheatmap" onclick="ChooseWeighted()"> Reg Heatmap Pop Based Prob </label><br />
+		
+
+	</p>
+	
+
+  </body>
+</html>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+
+	<script type="text/javascript">{
+// This is start of ajax script
+var myGeoData;
+JsonGeoData = [];
+var d;
+
+$(document).ready(function(){
+ initialize();
+        $.ajax({
+            url: "CallPerCapDB.php",
+            type: 'GET',
+			data: 'json',
+			async: false,
+            success: function (data) { 
+
+			alert("yoo");
+			alert(data);
+			alert(data[1]);
+			alert(data[2]);
+			myGeoData=data;
+			alert(myGeoData);
+
+			ParseTheData(myGeoData);
+			PushGeoData(JsonGeoData);
+		alert("its all good");
+			
+            }
+			
+        });
+		
+});
+
+function ParseTheData(rawData)
+{
+	theLen = rawData.length;
+		for(var i=0; i < theLen; i++)
+		{
+			temp = jQuery.parseJSON(rawData[i]);
+			JsonGeoData.push(temp);
+		}
+		alert(JsonGeoData.length);
+}
+
+//end of ajax script}
+</script>

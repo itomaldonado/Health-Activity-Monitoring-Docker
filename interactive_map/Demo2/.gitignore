@@ -1,0 +1,11 @@
+*.pyc
+# don't include third-party dependencies.
+lib/
+!lib/README.md
+.DS_Store
+.idea/
+dist/
+node_modules/
+web/bower_components/
+.project
+.pydevproject

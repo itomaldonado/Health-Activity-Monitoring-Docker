@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="Zoho Sites 1.0, http://zoho.com/sites"><title>Health Monitoring Analytics - Home</title><meta property="og:title" content="Health Monitoring Analytics - Home"><meta property="og:url" content="home.htm"><meta property="og:description" content=""><link href="Home_files/content_style.css" rel="stylesheet" type="text/css"><link href="Home_files/style.css" rel="stylesheet" type="text/css"><link href="Home_files/contentreset_style.css" type="text/css" rel="stylesheet"> <link rel="stylesheet" href="Home_files/webfonts.css" type="text/css"><script>var ZS_ColumnFix=false;var ZS_FormAppName="health-monitoring-analytics-42884795"</script><!--[if gt IE 8]><script>ZS_ColumnFix=true</script><script src="/js/json2.js"></script><![endif]--><script src="Home_files/commonUtils.js"></script><script src="Home_files/bootstrap.js"></script><script src="Home_files/navigation.js"></script><script>var ZS_adjustHeight=false;var ZS_PublishMode = true; var ZS_MobileVer = false;</script><script src="Home_files/animation.js"></script><script src="Home_files/audio.js"></script><script src="Home_files/in.js"></script><script src="Home_files/jquery.js"></script><script src="Home_files/form.js"></script><script src="Home_files/generatejs.js"></script><script src="Home_files/searchableInput.js"></script><script src="Home_files/app.js"></script><script src="Home_files/form-renderer.js"></script><script src="Home_files/formSubmitJs.js"></script>
+
+
+<!******ADDED SCRIPT FILES******************************>
+<style type="text/css">
+  html { width: 100%; height: 100% }
+  body { width: 100%; height: 100% }
+  #map_canvas { width: 100%; height: 100% }
+
+#panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+</style>
+
+
+
+
+    	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+			<script type = "text/javascript" src = "jsonGeoData.js"></script>
+	<script type = "text/javascript" src = "PerCapitaHeatMap.js"></script>
+
+
+<!******END OF ADDED SCRIPT FILES***********************>
+
+</head><body>
+<div class="themeWidth">
+  <div class="themeSocialIconAndSearchBoxContainer"> 
+     </div>
+  <div class="themeContentContainer">
+    <div class="themeBrandingArea">
+      <div class="themeBrandingContainer">
+        <div class="tableRow"> 
+          <div class="tableCell themeLogoOuterContainer">
+            <div class="themeLogoArea"><a href="Home.htm"><img id="zpLogo" src="Home_files/a.png" width="100px"></a></div>
+          </div>
+          
+          <div class="tableCell themeSitenameCaptionOuterContainer">
+            <div class="themeBrandingContainer themeSitenameCaptionInnerContainer">
+              <div class="tableRow themeSitenameCaptionContainer">
+                <div class="tableCell themeSitenameCaptionContainer">  <span class="themeSitename" id="zpSitename">Health Monitoring Analytics</span> 
+                   <span class="themeCaption" id="zpCaption">DJGIK</span>  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="themeNavigationContainer">
+      <div id="childPageParent" style="position:relative">
+    <div id="childPage">
+    </div>
+</div><div id="navigation">
+<ul data-transition="true" id="nav-top" data-navorientation="horizontal">
+            
+            
+            
+            
+            
+<li class="selected"><a target="_self" href="index.htm"><span>Home</span><em></em></a></li><li><a target="_self" href="maps.htm"><span>Maps</span><em></em></a></li><li><a target="_self" href="play.htm"><span>Play</span><em></em></a></li><li><a target="_self" href="recommendation.htm"><span>Recommendation</span><em></em></a></li><li><a target="_self" href="about.htm"><span>About</span><em></em></a></li></ul>
+
+
+</div>
+    </div>
+    
+        
+    
+    <div class="themeContentArea floatLeft" style="width:100%">    <div id="page-container" class="zpcontent-wrapper">
+
+            <div id="elm_9RDj9vIsQWGN7Pj636jTOg" class="zpelement-wrapper zpcol-layout">
+            <div class="zpcolumns">
+                    <div class="zpflLeft zpcolumn" style="width:70%">
+                    <div id="pos_uy8H0v7eRcmaZ17w2DdTGQ" class="zpwrapper col-space"><div style="height:450px;">&nbsp;
+
+<!********************CODE THAT I ADDED*********************************************************>
+
+	 <h1> Per Capita Heat Map </h1> 
+    <div id="map_canvas"></div>
+
+
+		<h2> Map Type </h2>
+		<label><input type = "radio" name = "MapType"  id="heatmap" value="heatmap" onclick="ChooseRegular()"> Regular Heatmap </label><br />
+		<label><input type = "radio" name = "MapType"  id="percapitaheatmap" value="percapitaheatmap" onclick="ChooseWeighted()"> PerCapita HeatMap </label><br />
+
+
+
+<!************************END OF CODE I ADDED****************************************************>
+
+
+
+
+</div>
+
+            <div id="elm_zhmP-kVORGqcopAGwx31Iw" class="zpelement-wrapper image" name="image">
+                <div class="zpAlignPos" style="float:left;text-align:center;;margin-bottom:2px;">
+
+
+
+<!*******************THE CODE BELOW WAS "SHUT OFF" BY INSERTING THE EXCLAMATION*****************>
+
+                <!img class="zpImage" src="Home_files/map1.png" style="border:0px solid;border-color:initial;width: 652px;margin-right:10px;padding:0px;background:transparent; 
+                    cursor:pointer;" onclick="lightBox(this)
+                ">
+<!*******************END OF "SHUT OFF"************************************************************>
+
+
+                <div class="zpImageCaption" style="text-align:center; width: 652px;margin:0px auto;"></div></div>
+            </div>
+                    </div></div> 
+                    <div class="zpflLeft zpcolumn" style="width:30%">
+                    <div id="pos_Fa-UTG2ARSqTYa2lGhmzcA" class="zpwrapper col-space"><div style="height:1px;">&nbsp;</div>
+
+                <div id="elm_uOtfqT7pR-mICCJYwU_kzA" class="zpelement-wrapper form" name="form">
+                    <div class="zpAlignPos" id="zpform_Home" formid="42884795-Home"><div><form style="visibility: visible;" elname="Home" name="Home" action="/siteforms/addRecordValidate.do" onsubmit="fnFormSubmit(this)" method="post"><input name="formLinkName" value="Home" type="hidden"><input name="recType" value="1" type="hidden"><input name="formid" value="2298218000000016001" type="hidden"><input name="formLinkId" value="4" type="hidden"><input name="tableName" value="t_2298218000000016001" type="hidden"><input name="appLinkName" value="zsa-42884795" type="hidden"><input name="sharedBy" value="42884795" type="hidden"><input name="dateFormat" value="dd-MMM-yyyy" type="hidden"><input name="timeZone" value="America/Los_Angeles" type="hidden"><h2 class="frmname">Choose Location</h2><ul><li id="Home-Location-1"><label>Location</label><div><span><input formcompid="2298218000000014838" onchangeexists="" name="Location" fieldtype="1" delugetype="STRING" type="text"></span></div></li><li><span style="display:none;" id="formMsg_Home"></span></li><li><label>&nbsp;</label><div><input value="Submit" type="submit"><input value="Reset" type="reset"></div></li></ul></form></div><script>i18n["selectOption"] ="Select";i18n["invalidmsg"]="Invalid entries found, please correct and resubmit.";i18n["pleasewait"]="Please Wait";ZCForm.inZohoCreator = false;var onLoadExist = false;var appLinkName = "zsa-42884795";var formLinkName = "Home";var formDispName = "Choose Location";var formAccessType = 1;var formID = 4;ZCForm.zcFormAttributes['genScriptURL'] = "/siteforms/generateJS.do";ZCForm.zcFormAttributes['formParentDiv'] = false;ZCForm.zcFormAttributes['customCalendar'] = true;ZCForm.zcFormAttributes['browseralert'] = false;ZCForm.zcFormAttributes['ajaxreload'] = true;ZCForm.zcFormAttributes['fieldContainer'] = "div";   ZCForm.zcFormAttributes['eleErrTemplate'] = "<div tag='eleErr'> insertMessage </div>"; var paramsMapString = "formID=" + formID + ",appLinkName=" + appLinkName + ",formDispName="+ formDispName + ",formAccessType=1,formLinkName="+formLinkName; ZCForm.addToFormArr(paramsMapString, formLinkName);if(onLoadExist){doActionOnLoad(formID, ZCForm.getForm(formLinkName, formAccessType)); } else { ZCForm.enableForm(formLinkName,formAccessType); } ZCForm.regFormEvents("formLinkName","formAccessType");</script></div>
+                </div>
+
+        <div id="elm_5O7OW7PGQheCoHANVLjaPw" class="zpelement-wrapper text">
+                <div><h2>Calorie Meter</h2></div>
+            </div>
+
+        <div id="elm_G-2OOSGjQ62wrAJnpGW9Jw" class="zpelement-wrapper text">
+                <div><p>Today</p></div>
+            </div>
+
+            <div id="elm_zEgbcMewSYGuNLL6doPRJQ" class="zpelement-wrapper image" name="image">
+                <div class="zpAlignPos" style="float:left;text-align:center;;margin-bottom:2px;">
+                <img class="zpImage" src="Home_files/Calorie%2520Meter.png" style="border:0px solid;border-color:initial;width: 272px;margin-right:10px;padding:0px;background:transparent; 
+                    cursor:pointer;" onclick="lightBox(this)
+                ">
+                <div class="zpImageCaption" style="text-align:center; width: 272px;margin:0px auto;"></div></div>
+            </div>
+
+        <div id="elm_AuRmPJhTTjyapY5lCiXfuQ" class="zpelement-wrapper text">
+                <div><p>burned by<b><u>  23001 </u></b>people.</p></div>
+            </div>
+                    </div></div> 
+            </div></div>
+</div>
+</div>
+    
+    
+    
+    <div class="themeFooterArea clearDiv"> <div id="footer-container" class="zpcontent-wrapper"></div><!--zp:branding--> <!--/zp:branding--></div>
+     </div>
+</div>
+
+<div id="carouselCont" style="display:none"><div class="zs-slideshow-right-arrow"></div><div class="zs-slideshow-left-arrow"></div><div class="themeSlideshowOuterContainer"> <span class="themeSlideshowInnerContainer"> <span class="zs-slideshow-control"></span> </span> </div></div><div id="carouselCont" style="display:none"><div class="zs-slideshow-right-arrow"></div><div class="zs-slideshow-left-arrow"></div><div class="themeSlideshowOuterContainer"><span class="themeSlideshowInnerContainer"><span class="zs-slideshow-control"></span></span></div></div><div id="footerBar" style="display:none;font: 13px Arial,Helvetica,sans-serif; overflow: hidden; background:rgba(255, 255, 255, 0.3); padding: 3px 5px;"><span style="float: left; display: none; margin-top: 3px; padding: 0px 10px 0px 0px;" id="mobileSite"><a onclick="setCookie('userView','mobile','','/');" style="text-decoration: none;line-height: 1.5;color:#259A56;" href="http://healthmonitoringanalytics.zohosites.com/mobile/">Mobile Site</a></span></div><div style="clear:both"></div>
+</body></html>

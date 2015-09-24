@@ -1,0 +1,62 @@
+<html>
+<head>
+</head>
+<body>
+
+
+
+<!-- including jQuery from the google cdn -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.json.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+
+<script type="text/javascript">
+// This is our actual script
+var myGeoData;
+var b;
+var a;
+var c;
+var d;
+function easy(ez)
+{
+	return ez+1;
+}
+
+$(document).ready(function(){
+ 
+        $.ajax({
+            url: "CallPerCapDB.php",
+            type: 'GET',
+			data: 'json',
+			async: false,
+            success: function (data) { 
+			
+			alert("yoo");
+			alert(data);
+			alert(data[1]);
+			alert(data[2]);
+			myGeoData=jQuery.parseJSON(data[1]);
+			alert(myGeoData.weight);
+			alert(myGeoData.lat);
+			alert(data.length);
+            }
+        });
+		didIt(myGeoData);
+	
+});
+
+
+function didIt(bob)
+{
+alert("I, Dean");
+alert(bob.weight);
+alert("did it");
+}
+
+
+</script>
+
+
+
+</body>
+</html>

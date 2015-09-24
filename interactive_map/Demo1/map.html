@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Google Map API -->
+
+<script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization"></script>
+
+<!-- The famous JavaScript library - JQuery - http://jquery.com-->
+
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+
+<!-- The jquery.eventsource for eventsource API   
+     API for opening an HTTP connection for receiving push notifications from a server in the form of DOM events 
+     this API available at:  https://github.com/rwaldron/jquery.eventsource  -->
+    
+<script type="text/javascript" src="jquery.eventsource.js"></script>
+
+<!--  JavaScript Heatmap Library available from  http://www.patrick-wied.at/static/heatmapjs/   -->
+
+<script type="text/javascript" src="heatmap.js"></script>   
+<script type="text/javascript" src="heatmap-gmaps.js"></script>  
+
+<!-- code used for heatmap configuration and getting the twitter data  -->
+
+<script type="text/javascript" src="data.js"></script>  
+
+<!-- page body with loading the function from "data.js" -->
+
+    <body onload="ini()">
+    <div id="result"></div>
+    <div id="map_canvas" style="height: 300px; width: 500px;"></div>
+
+  </body>
+</body>
+</html>
